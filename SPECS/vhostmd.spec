@@ -11,15 +11,20 @@ Summary:        Virtual Host Metrics Daemon
 Group:          Application/Productivity
 License:        GPL
 URL:            http://www.novell.com
-Source0:        https://repo.citrite.net/xs-local-contrib/vhostmd/%{name}-%{version}.tar.gz
-Source1:        xe-vhostmd
-patch0:         patch-etc_init.d_vhostmd
-patch1:         patch-fix-enable-xenctrl-configure-opt
-patch2:         patch-etc_vhostmd_vhostmd.conf
-patch3:         patch-xen-4.1
-patch4:         de-perl.patch
-patch5:         patch-remove-xs-h
-patch6:         configure-dlopen.patch
+
+Source0: https://repo.citrite.net/xs-local-contrib/vhostmd/vhostmd-0.4.tar.gz
+Source1: SOURCES/vhostmd/xe-vhostmd
+Patch0: SOURCES/vhostmd/patch-etc_init.d_vhostmd
+Patch1: SOURCES/vhostmd/patch-fix-enable-xenctrl-configure-opt
+Patch2: SOURCES/vhostmd/patch-etc_vhostmd_vhostmd.conf
+Patch3: SOURCES/vhostmd/patch-xen-4.1
+Patch4: SOURCES/vhostmd/de-perl.patch
+Patch5: SOURCES/vhostmd/patch-remove-xs-h
+Patch6: SOURCES/vhostmd/configure-dlopen.patch
+
+
+Provides: gitsha(https://code.citrite.net/rest/archive/latest/projects/XS/repos/vhostmd/archive?at=1.0.0&format=tar#/vhostmd.patches.tar) = cd6c92293f013483eb6ca99198f5b21ca544f97e
+
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:	libtool, autoconf, automake, libxml2-devel, xen-dom0-devel, xen-libs-devel
 
