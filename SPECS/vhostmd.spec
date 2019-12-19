@@ -4,7 +4,7 @@
 
 Name:           vhostmd
 Version:        0.4
-Release:        xs29
+Release:        xs30
 Epoch:          0
 Summary:        Virtual Host Metrics Daemon
 
